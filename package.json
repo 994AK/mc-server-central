@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "commit": "git-cz"
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
@@ -25,6 +26,8 @@
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog-chinese": "^2.3.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",
@@ -38,5 +41,10 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vite-tsconfig-paths": "^4.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-chinese"
+    }
   }
 }
