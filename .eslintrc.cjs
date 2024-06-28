@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   extends: [
     'airbnb',
@@ -11,17 +11,17 @@ module.exports = {
     './.eslintrc-auto-import.json',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
-    'plugin:tailwindcss/recommended'
+    'plugin:tailwindcss/recommended',
   ],
   plugins: ['simple-import-sort'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 12,
     sourceType: 'module',
-    project: './tsconfig.eslint.json'
+    project: './tsconfig.eslint.json',
   },
   rules: {
     'simple-import-sort/imports': 'error',
@@ -30,16 +30,9 @@ module.exports = {
       'error',
       {
         namedComponents: 'arrow-function',
-        unnamedComponents: 'arrow-function'
-      }
-    ]
+        unnamedComponents: 'arrow-function',
+      },
+    ],
+    'import/no-extraneous-dependencies': 'off',
   },
-  overrides: [
-    {
-      files: ['vite.config.ts', 'tailwind.config.js', 'postcss.config.js'],
-      rules: {
-        'import/no-extraneous-dependencies': 'off'
-      }
-    }
-  ]
-};
+}
