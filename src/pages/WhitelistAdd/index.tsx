@@ -12,7 +12,7 @@ const WhitelistAdd: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
-    fetch('http://localhost:3000/users/status?status=0')
+    fetch('http://localhost:4556/api/users/status?status=0')
       .then((response) => response.json())
       .then((data) => {
         setUsers(data.data)
@@ -25,7 +25,7 @@ const WhitelistAdd: React.FC = () => {
   }, [])
 
   const handleApprove = (userId: string) => {
-    fetch(`http://localhost:3000/users/${userId}`, {
+    fetch(`http://localhost:4556/users/${userId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

@@ -16,7 +16,7 @@ const useFetchData = () => {
   const [pureStatus, setPureStatus] = useState<ServerStatus>({ online: 0, max: 0, users: [] })
 
   const fetchUtopiaData = () => {
-    fetch('http://localhost:3000/users/list')
+    fetch('http://localhost:4556/api/users/list')
       .then((response) => response.json())
       .then((data) => {
         if (data.code === 200) {

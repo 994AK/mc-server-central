@@ -32,7 +32,7 @@ const Home: React.FC = () => {
   }
 
   const handleWhitelistSubmit = (id: string) => {
-    fetch('http://localhost:3000/users/add', {
+    fetch('http://localhost:4556/api/users/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
